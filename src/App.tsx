@@ -1,5 +1,6 @@
 import React from 'react';
 import Background from './components/Background';
+import Foreground from './components/Foreground';
 
 interface AppProps {
   // Define prop types here
@@ -10,6 +11,7 @@ const App: React.FC<AppProps> = () => {
   return (
     <div className="relative w-full h-screen bg-zinc-800 ">
       <Background />
+      <Foreground />
     </div>
   );
 };
