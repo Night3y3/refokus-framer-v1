@@ -4,4 +4,9 @@
 
 * {
   font-family: "Gilroy";
+  /* background: #27272a; */
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

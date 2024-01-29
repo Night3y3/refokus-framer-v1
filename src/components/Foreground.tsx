@@ -9,9 +9,13 @@ const Foreground: React.FC<ForegroundProps> = () => {
 
 
     return (
-        <div className=' fixed top-0 left-0 z-10 w-full h-full '>
-            <Card />
+
+        <div className=' top-0 left-0 z-10 w-full h-full overflow-hidden '>
+            {Array.from({ length: 12 }).map((_, index) => (
+                <Card key={index} />
+            ))}
         </div>
+
     );
 };
 
