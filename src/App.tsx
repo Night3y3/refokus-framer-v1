@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar"
+import Stripes from "./components/Stripes";
 import Work from "./components/Work";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className=" min-w-full min-h-screen bg-zinc-900 font-[satoshi_variable] text-white">
       <NavBar />
       <Work />
+      <Stripes />
     </div>
   )
 }
