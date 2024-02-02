@@ -18,7 +18,7 @@ const NavBar: React.FC<NavBarProps> = () => {
                     </a>)))}
                 </div>
             </div>
-            <Button />
+            <Button text="Start Project" />
 
         </div>
     );
