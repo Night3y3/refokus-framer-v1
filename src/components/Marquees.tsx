@@ -13,7 +13,7 @@ const Marquees: React.FC<MarqueesProps> = () => {
 
     ]
     return (
-        <div className='py-10'>
+        <div className='py-10 select-none'>
             {img.map((marquee) => <Marquee imgurls={marquee} />)}
         </div>
     );
