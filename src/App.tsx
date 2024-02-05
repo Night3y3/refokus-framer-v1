@@ -4,8 +4,13 @@ import NavBar from "./components/NavBar"
 import Products from "./components/Products";
 import Stripes from "./components/Stripes";
 import Work from "./components/Work";
+import LocomotiveScroll from 'locomotive-scroll';
+
+
+
 
 function App() {
+  const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <div className=" min-w-full min-h-screen bg-zinc-900 font-[satoshi_variable] text-white">
