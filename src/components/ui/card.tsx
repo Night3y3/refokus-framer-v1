@@ -1,5 +1,6 @@
 import React from 'react';
 import { MoveRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface cardProps {
     // Define prop types here
@@ -9,13 +10,13 @@ interface cardProps {
 const Card: React.FC<cardProps> = ({ width }) => {
     // Component logic using props
     return (
-        <div className={` ${width} bg-zinc-800 ${width === 'w-2/3' && 'hover:bg-violet-500'} p-5 rounded-2xl flex flex-col justify-between min-h-[30rem]`}>
+        <motion.div whileHover={{ backgroundColor: width === "w-2/3" && "#7443ff", padding: "25px" }} className={` ${width} bg-zinc-800 p-5 rounded-2xl flex flex-col justify-between min-h-[30rem]`}>
             <div className='w-full'>
                 <div className='w-full flex justify-between items-center'>
                     <h1>Up Next:News</h1>
                     <MoveRight size={24} />
                 </div>
-                <h1 className='text-3xl font-medium mt-5'>kuch bhi</h1>
+                <h1 className='text-3xl font-medium mt-5'>Stories</h1>
             </div>
             <div className=' down w-full mt-20'>
                 {width === 'w-2/3' && (
@@ -31,7 +32,7 @@ const Card: React.FC<cardProps> = ({ width }) => {
                     </>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 };
 
