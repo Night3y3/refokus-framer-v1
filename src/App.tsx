@@ -12,6 +12,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 
 function App() {
+  // @ts-ignore
   const locomotiveScroll = new LocomotiveScroll();
 
   return (

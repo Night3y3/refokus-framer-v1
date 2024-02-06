@@ -15,7 +15,9 @@ interface ProductProps {
 }
 
 const Product: React.FC<ProductProps> = ({ product, mover, index }) => {
+    // @ts-ignore
     const [hover, setHover] = useState(false);
+
     return (
         <motion.div whileHover={{ backgroundColor: product.color, padding: "25px" }} className={`h-[23rem] py-10 text-white`} style={hover ? { background: product.color } : {}}>
             <div onMouseEnter={() => mover(index)} className=' mx-auto max-w-screen-xl flex justify-between items-center'>

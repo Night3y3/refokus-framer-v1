@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, useMotionValueEvent, useScroll } from "framer-motion"
+import { useMotionValueEvent, useScroll } from "framer-motion"
 
 interface WorkProps {
     // Define prop types here

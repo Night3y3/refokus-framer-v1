@@ -10,6 +10,7 @@ interface cardProps {
 const Card: React.FC<cardProps> = ({ width }) => {
     // Component logic using props
     return (
+        // @ts-ignore
         <motion.div whileHover={{ backgroundColor: width === "w-2/3" && "#7443ff", padding: "25px" }} className={` ${width} bg-zinc-800 p-5 rounded-2xl flex flex-col justify-between min-h-[30rem]`}>
             <div className='w-full'>
                 <div className='w-full flex justify-between items-center'>
