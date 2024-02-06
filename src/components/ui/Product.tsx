@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../Button';
+import { motion } from 'framer-motion';
 
 interface ProductProps {
     product: {
@@ -16,10 +17,10 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ product, mover, index }) => {
     const [hover, setHover] = useState(false);
     return (
-        <div className={`w-full h-[23rem] py-10 text-white transition duration-300 ease-in-out ${hover ? "" : ""}`} style={hover ? { background: product.color } : {}}>
+        <motion.div whileHover={{ backgroundColor: product.color, padding: "25px" }} className={`h-[23rem] py-10 text-white`} style={hover ? { background: product.color } : {}}>
             <div onMouseEnter={() => mover(index)} className=' mx-auto max-w-screen-xl flex justify-between items-center'>
                 <h1 className=' capitalize font-semibold text-5xl'>{product.title}</h1>
-                <div className='details w-1/3'>
+                <div className='details w-1/3 flex items-center justify-center'>
                     <p className=' mb-10'>{product.about}</p>
                     {hover ? (<>
                         <div className='flex gap-5 items-center'>
@@ -30,7 +31,7 @@ const Product: React.FC<ProductProps> = ({ product, mover, index }) => {
                     </>) : null}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
